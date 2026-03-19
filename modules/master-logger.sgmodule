@@ -1,0 +1,14 @@
+#!name=AXE Master Logger
+#!desc=Logs all HTTP requests and responses to Telegram
+#!system=ios
+#!version=1.0
+#!author=AxeB2B
+#!homepage=https://github.com/APNA_USERNAME/surge-axe
+#!icon=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/assets/axe-icon.png
+
+[Script]
+http-request ^https?:// script-path=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/scripts/request_logger.js, requires-body=true, timeout=15, tag=AXE-ReqLogger
+http-response ^https?:// script-path=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/scripts/response_logger.js, requires-body=true, timeout=15, tag=AXE-ResLogger
+
+[MITM]
+hostname = *

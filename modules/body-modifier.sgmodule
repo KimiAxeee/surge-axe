@@ -1,0 +1,12 @@
+#!name=AXE Body Modifier
+#!desc=Inject custom fields into API request bodies
+#!system=ios
+#!version=1.0
+#!author=AxeB2B
+#!homepage=https://github.com/APNA_USERNAME/surge-axe
+
+[Script]
+http-request ^https?://api\. script-path=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/scripts/body_modifier.js, requires-body=true, timeout=10, tag=AXE-BodyMod
+
+[MITM]
+hostname = *

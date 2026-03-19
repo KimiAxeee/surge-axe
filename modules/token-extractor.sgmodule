@@ -1,0 +1,13 @@
+#!name=AXE Token Extractor
+#!desc=Auto captures auth tokens, API keys, JWT from all traffic
+#!system=ios
+#!version=1.0
+#!author=AxeB2B
+#!homepage=https://github.com/APNA_USERNAME/surge-axe
+#!icon=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/assets/axe-icon.png
+
+[Script]
+http-response ^https?:// script-path=https://raw.githubusercontent.com/APNA_USERNAME/surge-axe/main/scripts/token_extractor.js, requires-body=true, timeout=10, tag=AXE-TokenExtract
+
+[MITM]
+hostname = *

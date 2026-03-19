@@ -1,0 +1,32 @@
+#!name=AXE CORS Bypass
+#!desc=Removes all security headers, enables CORS on every response
+#!system=ios
+#!version=1.0
+#!author=AxeB2B
+#!homepage=https://github.com/APNA_USERNAME/surge-axe
+
+[Header Rewrite]
+^https?:// header-replace request User-Agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+^https?:// header-replace request Accept "*/*"
+^https?:// header-replace request Accept-Language "en-US,en;q=0.9"
+^https?:// header-replace request Cache-Control "no-cache"
+^https?:// header-del request Referer
+^https?:// header-del request X-Forwarded-For
+^https?:// header-del request X-Real-IP
+^https?:// header-replace response Access-Control-Allow-Origin "*"
+^https?:// header-add response Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+^https?:// header-add response Access-Control-Allow-Headers "*"
+^https?:// header-add response Access-Control-Allow-Credentials "true"
+^https?:// header-del response Content-Security-Policy
+^https?:// header-del response Content-Security-Policy-Report-Only
+^https?:// header-del response X-Frame-Options
+^https?:// header-del response X-Content-Type-Options
+^https?:// header-del response Strict-Transport-Security
+^https?:// header-del response X-XSS-Protection
+^https?:// header-del response Referrer-Policy
+^https?:// header-del response Permissions-Policy
+^https?:// header-del response Feature-Policy
+^https?:// header-del response Expect-CT
+
+[MITM]
+hostname = *
